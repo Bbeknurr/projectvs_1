@@ -1,40 +1,118 @@
-/* src/components/Home.css */
 .home {
+    font-family: 'Arial', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Секция hero */
+.hero {
+    background-color: #f5f5f5;
+    padding: 30px 0;
     text-align: center;
-    margin: 30px; /* Увеличен отступ */
 }
 
-.card-container {
-    display: flex; /* Используем flexbox для горизонтального расположения */
-    justify-content: center; /* Центрируем карточки */
-    gap: 30px; /* Увеличены отступы между карточками */
+.hero-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.card {
-    background-color: burlywood; /* Задайте здесь желаемый цвет фона */
-    border-radius: 12px; /* Увеличен радиус округления углов для карточек */
-    padding: 30px; /* Увеличены внутренние отступы */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Увеличена тень для карточек */
-    transition: background-color 0.3s; /* Плавный переход при наведении */
+.hero-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
 }
 
-.card:hover {
-    background-color: #e0e0e0; /* Цвет при наведении */
+/* Секция services */
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0; /* Увеличен отступ для секции */
+    background-color: #fff;
 }
 
-h1 {
-    color: #4B3D3D; /* Темно-коричневый цвет */
-    margin-bottom: 30px; /* Увеличен отступ снизу для заголовка */
+.service-item {
+    width: 30%;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-/* home.css */
-
-.card h2 {
-    color: #2c3e50; /* Цвет заголовка */
-    font-size: 32px; /* Увеличен размер шрифта заголовка */
+.service-item:hover {
+    transform: scale(1.05); /* Легкое увеличение при наведении */
 }
 
-.card p {
-    color: #7f8c8d; /* Цвет описания */
-    font-size: 18px; /* Увеличен размер шрифта описания */
+.service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.service-item h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Секция info */
+.info {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: #f2f2f2;
+}
+
+.info-item {
+    width: 30%;
+    text-align: center;
+}
+
+.info-item h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.info-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Стили для футера */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 12px;
+}
+
+.footer p {
+    margin: 5px 0; /* Отступ между строками */
+}
+
+.footer-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icon {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer-icon:hover {
+    color: #f39c12; /* Цвет при наведении */
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    --lightColor: #EFE3DF;
+    
     --textColor: #2B2024;
     --bgLink: #673D3F;
     --bgLinkHover: #B05459;
@@ -12,65 +12,29 @@ body {
     background: var(--lightColor);
     color: var(--textColor);
     font-size: 22px;
+    margin: 0; /* Убираем отступы по умолчанию */
+    display: flex; /* Flexbox для центрирования */
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center; /* Вертикальное центрирование (если нужно) */
+    min-height: 100vh; /* Занимаем всю высоту вьюпорта */
 }
 
 .main {
     display: flex;
-    justify-content: space-between; /* Выравнивание по горизонтали */
-    align-items: flex-start; /* Выравнивание по вертикали */
+    flex-direction: column; /* Вертикальное выравнивание */
+    align-items: center; /* Центрирование содержимого по горизонтали */
     gap: 20px; /* Пробел между элементами */
-}
-
-.main__text {
-    flex: 1; /* Занять оставшееся пространство */
-    line-height: 1.5;
-    margin: 20px 0; /* Отступы сверху и снизу */
-}
-
-.main__images {
-    display: flex; /* Горизонтальная компоновка */
-    gap: 12px; /* Пробел между изображениями */
-}
-
-.link {
-    font-size: 20px;
-    text-align: center;
-    background: var(--bgLink);
-    color: var(--lightColor);
-    border: none;
-    text-decoration: none;
-    padding: 16px 0;
-    display: block;
-    width: 100%;
-    max-width: 300px;
-    cursor: pointer;
-    transition: 0.2s;
-    margin-top: 20px; /* Отступ сверху */
-}
-
-.link:hover {
-    background: var(--bgLinkHover);
-}
-
-.content {
-    max-width: 600px; /* Максимальная ширина текста */
-    margin: 0 auto; /* Центрирование текста */
-    padding: 20px; /* Внутренние отступы */
-}
-
-.main {
-    display: flex;
-    align-items: flex-start; /* Align items to the start of the flex container */
     padding: 60px 20px;
     background-color: var(--lightColor);
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ширина 100% от родительского элемента */
+    margin: 0 auto; /* Центрирование блока */
 }
 
 .main__item {
-    text-align: left; /* Align text to the left */
-    margin-right: 40px; /* Space between text and images */
-    flex: 1; /* Allow the text section to take available space */
+    text-align: center; /* Выравнивание текста по центру */
+    width: 100%; /* Занять всю ширину родителя */
 }
 
 .main__title {
@@ -84,7 +48,7 @@ body {
     color: var(--textColor);
     margin-bottom: 20px;
     line-height: 1.5;
-    font-weight: bold; /* Added for bold text */
+    font-weight: bold; /* Жирный текст */
 }
 
 .link {
@@ -101,11 +65,4 @@ body {
 .link:hover {
     background-color: var(--bgLinkHover);
     transform: scale(1.05);
-}
-
-.main__images {
-    display: flex; /* Arrange images in a row */
-    justify-content: center; /* Center the images */
-    gap: 10px; /* Space between images */
-    flex: 1; /* Allow images section to take available space */
 }
